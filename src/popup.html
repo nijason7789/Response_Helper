@@ -1,15 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="popup.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Actions</title>
+    <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-    <div id = "contentArea" style="width: 400px; height: 300px; border: 5px solid black;">
-        <h1>
-            color change area
-        </h1>
+    <div id="step1" class="container">
+        <label for="commentInput">Please paste comment here</label>
+        <input type="text" id="commentInput" placeholder="Value">
+        <button id="sendButton">Send</button>
     </div>
-    <button id="changeColor">change color</button>
+    <!-- 第二步骤按钮，包括返回和更多操作按钮 -->
+    <div id="step2" class="container" style="display: none;">
+        <button class="actionButton">Place holder 1</button>
+        <button class="actionButton">Place holder 2</button>
+        <button class="actionButton">Place holder 2</button>
+        <div class="button-row">
+            <button id="moreButton">More</button>
+            <button id="returnButton">Back</button>
+        </div>
+    </div>
+
     <script src="popup.js"></script>
 </body>
 </html>

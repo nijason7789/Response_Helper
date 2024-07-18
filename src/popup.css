@@ -1,14 +1,57 @@
-#contentArea {
-    width: 200px;
-    height: 200px;
-    background-color: white; /* 初始背景颜色 */
-    color: black;
+.body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background-color 0.5s; /* 平滑过渡效果 */
+    background-color: #f4f4f4;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+input[type="text"], button, .button-row button {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 button {
-    margin-top: 10px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.button-row {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#returnButton {
+    background-color: purple;
+    width: 45%; /* Adjust width to fit side by side */
+}
+
+#moreButton {
+    width: 45%; /* Adjust width to fit side by side */
+    background-color: #333; /* Standard button color */
 }

@@ -1,0 +1,14 @@
+#contentArea {
+    width: 200px;
+    height: 200px;
+    background-color: white; /* 初始背景颜色 */
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s; /* 平滑过渡效果 */
+}
+
+button {
+    margin-top: 10px;
+}

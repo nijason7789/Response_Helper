@@ -1,15 +1,17 @@
 {
     "manifest_version": 3,
-    "name": "My Chrome Extension",
-    "version": "1.0",
+    "name": "Response Helper",
+    "version": "0.0.1",
     "permissions": [
         "activeTab",
-        "tabs"
+        "tabs",
+        "scripting"
     ],
     "content_scripts":[
         {
-            "matches":["https://developer.chrome.com/*"],
-            "js":["src/content.js"]
+            "matches":["<all_urls>"],
+            "js":["src/content.js"],
+            "type":"module"
         }
     ],
     "action": {
@@ -21,6 +23,7 @@
       }
     },
     "background": {
-      "service_worker": "src/background.js"
+      "service_worker": "src/background.js",
+      "type":"module"
     }
   }

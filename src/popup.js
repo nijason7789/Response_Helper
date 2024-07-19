@@ -1,15 +1,21 @@
-document.getElementById('sendButton').addEventListener('click', function() {
-    document.getElementById('step1').style.display = 'none';
-    document.getElementById('step2').style.display = 'flex'; // 使用 flex 来保持按钮垂直居中
-});
+import { handleCopyButtonClick, handleSendButtonClick, handleReturnButtonClick } from "./scripts/buttonEvents.js";
 
-document.getElementById('returnButton').addEventListener('click', function() {
-    document.getElementById('step2').style.display = 'none';
-    document.getElementById('step1').style.display = 'flex'; // 返回第一步骤
-});
+const copyBtn = document.getElementById('copyButton')
+const sendBtn = document.getElementById('sendButton')
+const returnBtn = document.getElementById('returnButton')
 
-// 可以为 'More' 按钮添加额外的事件监听器
+copyBtn.addEventListener('click', handleCopyButtonClick);
+sendBtn.addEventListener('click', handleSendButtonClick);
+returnBtn.addEventListener('click',handleReturnButtonClick);
+
 document.getElementById('moreButton').addEventListener('click', function() {
     console.log("More button clicked");
-    // 这里可以添加更多的功能，如加载更多选项
 });
+
+// document.getElementById('copyButton').addEventListener('click', function() {
+//     console.log("Copy button clicked");
+//     document.body.style.cursor = 'crosshair';
+//     document.addEventListener('click', selectElement, { once: true });
+//     event.stopPropagation();
+
+// });

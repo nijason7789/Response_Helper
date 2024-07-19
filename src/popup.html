@@ -10,9 +10,12 @@
     <div id="step1" class="container">
         <label for="commentInput">Please paste comment here</label>
         <input type="text" id="commentInput" placeholder="Value">
+        <div class="button-row">
+        <button id="copyButton">Copy</button>
         <button id="sendButton">Send</button>
+        </div>
     </div>
-    <!-- 第二步骤按钮，包括返回和更多操作按钮 -->
+    <!-- Step 2 frame -->
     <div id="step2" class="container" style="display: none;">
         <button class="actionButton">Place holder 1</button>
         <button class="actionButton">Place holder 2</button>
@@ -23,6 +26,6 @@
         </div>
     </div>
 
-    <script src="popup.js"></script>
+    <script type="module" src="popup.js"></script>
 </body>
 </html>

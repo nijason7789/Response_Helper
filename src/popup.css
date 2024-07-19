@@ -55,3 +55,13 @@ button:hover {
     width: 45%; /* Adjust width to fit side by side */
     background-color: #333; /* Standard button color */
 }
+
+#copyButton {
+    width: 45%; /* Adjust width to fit side by side */
+    background-color: #333; /* Standard button color */
+}
+
+#sendButton {
+    width: 45%; /* Adjust width to fit side by side */
+    background-color: #333; /* Standard button color */
+}

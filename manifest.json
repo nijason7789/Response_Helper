@@ -5,13 +5,15 @@
     "permissions": [
         "activeTab",
         "tabs",
-        "scripting"
+        "scripting",
+        "contextMenus",
+        "storage",
+        "clipboardWrite"
     ],
     "content_scripts":[
         {
             "matches":["<all_urls>"],
-            "js":["src/content.js"],
-            "type":"module"
+            "js":["/src/content.js"]
         }
     ],
     "action": {

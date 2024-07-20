@@ -1,6 +1,8 @@
 export function handleCopyButtonClick() {
+  console.log('copybtn clicked')
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
       chrome.tabs.sendMessage(tabs[0].id, {action: "startSelection"});
+      console.log(tabs[0].id)
     });
   }
 

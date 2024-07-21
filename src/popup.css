@@ -30,6 +30,50 @@ input[type="text"], button, .button-row button {
     border-radius: 5px;
 }
 
+.translation-display {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: #333;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.original-text {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.translated-text {
+    font-size: 14px;
+    color: #888;
+}
+
+.actionButton {
+    position: relative; /* Required for absolute positioning inside the button */
+}
+
+.actionButton::after {
+    content: attr(data-translation); /* Use the data-translation attribute as content */
+    display: none; /* Initially hide the tooltip */
+    position: absolute;
+    bottom: 100%; /* Position above the button */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: yellow; /* Tooltip background */
+    color: black; /* Text color */
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.actionButton:hover::after {
+    display: block; /* Show the tooltip on hover */
+}
+
 button {
     background-color: #333;
     color: white;

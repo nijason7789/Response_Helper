@@ -1,3 +1,5 @@
+import {sendCommentRequest, sendMoreCommentRequest} from './api/sendApi.js';
+
 export function handleCopyButtonClick() {
   console.log('copybtn clicked')
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
@@ -27,25 +29,27 @@ export function handleReturnButtonClick(){
   document.getElementById('step1').style.display = 'flex';
 }
 
-function sendCommentRequest(commentInput, callback){
-  const api_url = 'http://localhost:3000';
-  const api_path = '/api/openai';
-  fetch(api_url+api_path, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({"originalComment": commentInput})
+export function handleMoreButtonClick(){
+  const originalComment = document.getElementById('originalCommentDisplay').textContent;
+  const suggestion_1 = document.getElementById('suggestion1').textContent;
+  const suggestion_2 = document.getElementById('suggestion2').textContent;
+  const suggestion_3 = document.getElementById('suggestion3').textContent;
+  const moreComment = {
+    "originalComment":originalComment,
+    "Suggestion_1":suggestion_1,
+    "Suggestion_2":suggestion_2,
+    "Suggestion_3":suggestion_3
+  }
+  sendMoreCommentRequest(moreComment, (err,data) => {
+    if(err){
+      console.error('Failed to send data:', err);
+    }
+    else{
+      updateSuggestionBtn(data);
+      updateOriginalCommentDisplay(moreComment.originalComment, data);
+
+    }
   })
-  .then(response => response.json())
-  .then(data => {
-    console.log('Success:', data);
-    callback(null, data); // 成功时调用回调函数，没有错误，返回数据
-  })
-  .catch((error) => {
-    console.error('Error:', error);
-    callback(error); // 错误时调用回调函数，传递错误对象
-  });
 }
 
 function updateSuggestionBtn(suggestions){

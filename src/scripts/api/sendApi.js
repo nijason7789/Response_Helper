@@ -11,11 +11,11 @@ export function sendCommentRequest(commentInput, callback){
     .then(response => response.json())
     .then(data => {
       console.log('Success:', data);
-      callback(null, data); // 成功时调用回调函数，没有错误，返回数据
+      callback(null, data);
     })
     .catch((error) => {
       console.error('Error:', error);
-      callback(error); // 错误时调用回调函数，传递错误对象
+      callback(error);
     });
   }
 
@@ -32,10 +32,10 @@ export function sendCommentRequest(commentInput, callback){
     .then(response => response.json())
     .then(data => {
       console.log('Success:', data);
-      callback(null, data); // 成功时调用回调函数，没有错误，返回数据
+      callback(null, data);
     })
     .catch((error) => {
       console.error('Error:', error);
-      callback(error); // 错误时调用回调函数，传递错误对象
+      callback(error);
     });
   }

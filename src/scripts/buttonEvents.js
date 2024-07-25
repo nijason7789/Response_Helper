@@ -52,6 +52,10 @@ export function handleMoreButtonClick(){
   })
 }
 
+export function handleSuggestionBtnClick(){
+  navigator.clipboard.writeText(event.target.textContent)
+}
+
 function updateSuggestionBtn(suggestions){
   const button1 = document.getElementById('suggestion1');
   const button2 = document.getElementById('suggestion2');

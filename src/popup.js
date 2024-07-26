@@ -1,5 +1,4 @@
 import { handleSendButtonClick, handleReturnButtonClick, handleMoreButtonClick, handleSuggestionBtnClick } from "./scripts/buttonEvents.js";
-import { setupMessageListener } from './scripts/messageHandler.js'
 const sendBtn = document.getElementById('sendButton');
 const returnBtn = document.getElementById('returnButton');
 const moreBtn = document.getElementById('moreButton');
@@ -13,5 +12,4 @@ suggestionBtns.forEach(btn => {
     btn.addEventListener('click', handleSuggestionBtnClick);
 });
 
-setupMessageListener();
 

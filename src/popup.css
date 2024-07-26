@@ -104,5 +104,5 @@ button:hover {
 #sendButton {
     width: 45%; /* Adjust width to fit side by side */
     background-color: #333; /* Standard button color */
-    position: center;
+    margin:auto;
 }

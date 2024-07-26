@@ -29,21 +29,6 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   }
 });
 
-// 添加右鍵菜單項（如果需要）
-chrome.runtime.onInstalled.addListener(() => {
-  chrome.contextMenus.create({
-    id: "copyElement",
-    title: "複製元素",
-    contexts: ["all"]
-  });
-});
-
-// 處理右鍵菜單點擊事件
-chrome.contextMenus.onClicked.addListener((info, tab) => {
-  if (info.menuItemId === "copyElement") {
-    chrome.tabs.sendMessage(tab.id, { action: "startSelection" });
-  }
-});
 
 // 可以添加其他需要在後台持續運行的邏輯
   

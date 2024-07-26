@@ -1,5 +1,7 @@
+import config from '../../config.js';
+
 export function sendCommentRequest(commentInput, callback){
-    const api_url = 'http://localhost:3000';
+    const api_url = config.API_DOMAIN;
     const api_path = '/api/openai';
     fetch(api_url+api_path, {
       method: 'POST',
@@ -20,7 +22,7 @@ export function sendCommentRequest(commentInput, callback){
   }
 
   export function sendMoreCommentRequest(moreComments, callback){
-    const api_url = 'http://localhost:3000';
+    const api_url = config.API_DOMAIN;
     const api_path = '/api/moreComments';
     fetch(api_url+api_path, {
       method: 'POST',

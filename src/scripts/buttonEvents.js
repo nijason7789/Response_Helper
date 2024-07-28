@@ -3,7 +3,7 @@ import {sendWakeUpRequest, sendCommentRequest, sendMoreCommentRequest} from './a
 export function handleWelcomeButtonClick(){
   sendWakeUpRequest((err,data) => {
     if (err) {
-      console.error('Error during wakeup request:', error);
+      console.error('Error during wakeup request:', err);
     } else {
       console.log('Wakeup request successful:', data);
       document.getElementById('welcome').style.display = 'none';

@@ -1,4 +1,16 @@
-import {sendCommentRequest, sendMoreCommentRequest} from './api/sendApi.js';
+import {sendWakeUpRequest, sendCommentRequest, sendMoreCommentRequest} from './api/sendApi.js';
+
+export function handleWelcomeButtonClick(){
+  sendWakeUpRequest((err,data) => {
+    if (err) {
+      console.error('Error during wakeup request:', err);
+    } else {
+      console.log('Wakeup request successful:', data);
+      document.getElementById('welcome').style.display = 'none';
+      document.getElementById('step1').style.display = 'flex';
+    }
+  });
+}
 
 export function handleSendButtonClick() {
   const commentInput = document.getElementById('commentInput').value;

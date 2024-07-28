@@ -3,18 +3,7 @@
     "name": "Response Helper",
     "version": "1.0.0",
     "permissions": [
-        "activeTab",
-        "tabs",
-        "scripting",
-        "contextMenus",
-        "storage",
         "clipboardWrite"
-    ],
-    "content_scripts":[
-        {
-            "matches":["<all_urls>"],
-            "js":["/src/content.js"]
-        }
     ],
     "action": {
       "default_popup": "src/popup.html",

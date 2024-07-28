@@ -106,3 +106,14 @@ button:hover {
     background-color: #333; /* Standard button color */
     margin:auto;
 }
+
+.welcome-label {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.welcome-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
